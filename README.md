@@ -160,12 +160,14 @@ Each order is built by PumpPortal's local API (0.5% fee, `pool=auto` covers the 
 ## 7. Development
 
 ```bash
-cd signal
 npm ci
-npm test          # 162 tests: exact curve math vs the official SDK, decoders, engine, learning, edge finder, autopilot, feeds, live signing, memory, end-to-end
+npm test          # 197 tests: exact curve math vs the official SDK, decoders, engine, learning, edge finder, autopilot, Lab, feeds, updates, live signing, memory, end-to-end
 npm run build     # dist/engine.mjs (server with embedded dashboard), dist/research.mjs, dist/dashboard.html, dist/companion.html
 npm run typecheck
+npm run check     # all three, in that order
 ```
+
+**`main` is live.** Bots started with the Windows or Mac starter install whatever is on `main` within 30 minutes (section 1, "Updates install themselves"), so the built `dist/` is committed with every change and nothing reaches `main` before `npm run check` passes. Work on a branch and merge it into `main` when it is ready.
 
 Layout:
 - `src/core`: platform-independent engine: curve math, decoders, token state, wallets, narratives, features, model, learning (`learn.ts`, boosted trees in `boost.ts`, what it learned in `insight.ts`), the edge finder (`edges.ts`), the autopilot (`autopilot.ts`) and the self-check (`selfcheck.ts`), positions, outcomes, funnel

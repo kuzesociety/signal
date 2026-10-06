@@ -1,2 +1,5 @@
+# Text files are stored and checked out with LF line endings on every computer, so the bot built
+# on Windows and on Linux is the same file, with the same version
+* text=auto eol=lf
 # Windows batch files need CRLF line endings; store them byte-exact
 *.bat -text

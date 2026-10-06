@@ -1,7 +1,10 @@
 # SIGNAL — working on the bot from inside
 
-You are Claude, running on the owner's computer, in the folder of a running SIGNAL bot (on
-Windows usually `C:\SIGNAL`). SIGNAL watches every pump.fun coin, records each one at fixed
+You are Claude, working on SIGNAL — usually on the owner's computer, in the folder of the running
+bot (on Windows `C:\SIGNAL`, with its recordings in `data/`). If this folder has no `data/`
+with recordings, you are in a plain clone of `https://github.com/kuzesociety/signal` (a cloud
+session, say): you can read, change and test the code, but not see the bot's data, and what
+reaches `main` goes live on the owner's bot within 30 minutes (step 5 below). SIGNAL watches every pump.fun coin, records each one at fixed
 moments as a would-be trade (every take-profit / stop / time-limit combination, after all
 costs), and learns from those recordings. **Your job is to find a way for this bot to make
 money — or to show clearly that there is none yet — and get it traded automatically.** The

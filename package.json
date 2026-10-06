@@ -5,6 +5,10 @@
   "private": true,
   "type": "module",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuzesociety/signal"
+  },
   "engines": {
     "node": ">=20.10"
   },
